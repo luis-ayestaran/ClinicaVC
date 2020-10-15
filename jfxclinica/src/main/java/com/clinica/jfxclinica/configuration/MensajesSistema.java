@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class MensajesSistema {
-	//private static InputStream is;
 	private static Properties properties;
 		
 	static {
