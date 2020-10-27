@@ -7,6 +7,7 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import com.jfoenix.controls.JFXTimePicker?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -22,7 +23,7 @@
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinica.jfxclinica.controllers.MedicoController">
    <children>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="borderPane" stylesheets="@../stylesheets/medico.css">
+      <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="borderPane">
          <top>
             <GridPane prefWidth="721.0" styleClass="barraSuperior" BorderPane.alignment="CENTER">
               <columnConstraints>
@@ -134,7 +135,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="70.0" prefWidth="133.0">
                            <children>
-                              <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" styleClass="buttonNew" text="Listo" textFill="WHITE">
+                              <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" styleClass="button-primary" text="Listo" textFill="WHITE">
                                  <font>
                                     <Font name="Arial Bold" size="11.0" />
                                  </font>
@@ -158,4 +159,10 @@
          </center>
       </BorderPane>
    </children>
+   <stylesheets>
+      <URL value="@../stylesheets/medico.css" />
+      <URL value="@../stylesheets/fuentes.css" />
+      <URL value="@../stylesheets/paleta-colores.css" />
+      <URL value="@../stylesheets/boton.css" />
+   </stylesheets>
 </StackPane>
