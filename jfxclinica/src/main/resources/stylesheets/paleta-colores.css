@@ -1,4 +1,10 @@
 * {
-	-fx-primary: #212ed3;
-	
+	-fx-primary: #206AC4;
+	-fx-primary-dark: #084997;
+	-fx-primary-light: #588DCC;
+	-fx-secondary: #A1B6CE;
+	-fx-secondary-dark: #6280A3;
+	-fx-secondary-light: #ABB4C0;
+	-fx-text-correct: #F38F25;
+	-fx-wrong-text: #8E2616;
 }

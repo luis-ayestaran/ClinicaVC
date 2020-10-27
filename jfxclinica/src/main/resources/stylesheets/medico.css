@@ -1,21 +1,8 @@
-.button {
-	-fx-background-color: #009688;
-	-fx-font-family: "Roboto Medium";
-	-fx-font-size: 16px;
-}
-
 .borderPane {
 	-fx-background-color: white;
 }
 
 /* Custom Classes */
-
-.buttonNew{
-	-fx-background-color: #19517f;
-/* 	-fx-border-radius: 50%;
-	-fx-background-radius: 50%;
- */
-}
 
 .vBoxAgendar{
 	-fx-padding: 0em 2em;
