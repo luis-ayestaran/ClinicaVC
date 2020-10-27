@@ -1,0 +1,42 @@
+.button {
+	-fx-background-color: #009688;
+}
+
+.borderPane {
+	-fx-background-color: white;
+}
+
+/* Custom Classes */
+
+.buttonNew{
+	-fx-background-color: #19517f;
+/* 	-fx-border-radius: 50%;
+	-fx-background-radius: 50%;
+ */
+}
+
+.vBoxAgendar{
+	-fx-padding: 0em 2em;
+	-fx-effect: dropshadow(gaussian, #CFD1D2, .5em, 0, 0, .3em);
+	-fx-background-color: #CFD1D2;
+}
+
+.vBoxDashboard{
+	-fx-background-color: #19517f;
+	-fx-effect: dropshadow(gaussian, gray, .5em, 0, 0, .3em);
+}
+
+.barraSuperior{
+	-fx-border-color: white white gray white;
+}
+
+.opcionesDashboar:pressed {
+	-fx-background-color: #143F73;
+}
+
+#title {
+	-fx-text-fill: black;
+	-fx-font-family: Arial;
+	-fx-font-size: 1.8em;
+	-fx-font-weight: bold;
+}
