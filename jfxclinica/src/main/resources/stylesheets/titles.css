@@ -1,0 +1,18 @@
+.title {
+	-fx-font-family: "Roboto Bold";
+	-fx-font-size: 24px;
+	-fx-text-fill: -fx-primary;
+/* 	-fx-effect: dropshadow(gaussian, -fx-secondary-dark, 1em, 0, 0, .3em);*/
+}
+
+.subtitle {
+	-fx-font-family: "Roboto Bold";
+	-fx-font-size: 17px;
+	-fx-text-fill: -fx-primary-dark;
+}
+
+.outline.subtitle {
+    -fx-fill: lightseagreen;
+    -fx-stroke: firebrick;
+    -fx-stroke-width: 2px;
+}

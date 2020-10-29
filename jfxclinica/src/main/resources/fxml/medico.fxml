@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.calendarfx.view.YearMonthView?>
+<?import com.calendarfx.view.page.MonthPage?>
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import com.jfoenix.controls.JFXTimePicker?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
@@ -21,29 +22,117 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinica.jfxclinica.controllers.MedicoController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinica.jfxclinica.controllers.MedicoController">
    <children>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="borderPane">
-         <top>
-            <GridPane prefWidth="721.0" styleClass="barraSuperior" BorderPane.alignment="CENTER">
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <GridPane BorderPane.alignment="CENTER">
               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.0" minWidth="10.0" prefWidth="119.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="141.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="130.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="134.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="114.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="131.0" prefWidth="162.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="63.0" prefWidth="186.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.0" minWidth="69.0" prefWidth="163.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="1.0" minHeight="1.0" prefHeight="1.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <ImageView fitHeight="50.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/logo.png" />
-                     </image>
-                  </ImageView>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="5">
+                  <HBox maxWidth="120.0" minWidth="120.0" prefHeight="100.0" prefWidth="120.0" styleClass="alignment-center-center" GridPane.columnSpan="3">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/logo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" styleClass="top-line" GridPane.columnSpan="5" GridPane.rowIndex="1" />
+                  <VBox alignment="TOP_CENTER" GridPane.rowIndex="2" GridPane.rowSpan="8">
+                     <children>
+                        <HBox prefHeight="53.0" prefWidth="103.0" />
+                        <HBox alignment="CENTER" prefHeight="35.0" prefWidth="103.0">
+                           <children>
+                              <Label styleClass="dashboard-options" text="Agenda" textFill="#fff6f6">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="BOOK" size="15" styleClass="dashboard-options" />
+                                 </graphic></Label>
+                           </children>
+                           <styleClass>
+                              <String fx:value="alignment-center-center" />
+                              <String fx:value="padding-y-2" />
+                              <String fx:value="dashboard-options" />
+                           </styleClass>
+                        </HBox>
+                        <HBox prefHeight="34.0" prefWidth="103.0">
+                           <children>
+                              <Label styleClass="dashboard-options" text="Planes">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="DOLLAR" styleClass="dashboard-options" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                           <styleClass>
+                              <String fx:value="alignment-center-center" />
+                              <String fx:value="padding-y-2" />
+                              <String fx:value="dashboard-options" />
+                           </styleClass>
+                        </HBox>
+                        <HBox prefHeight="34.0" prefWidth="103.0">
+                           <children>
+                              <Label styleClass="dashboard-options" text="Recibos">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="CLIPBOARD" styleClass="dashboard-options" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                           <styleClass>
+                              <String fx:value="alignment-center-center" />
+                              <String fx:value="padding-y-2" />
+                              <String fx:value="dashboard-options" />
+                           </styleClass>
+                        </HBox>
+                     </children>
+                     <styleClass>
+                        <String fx:value="dashboard" />
+                        <String fx:value="alignment-top-center" />
+                     </styleClass>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label styleClass="title" text="Citas">
+                           <font>
+                              <Font name="Monospaced Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <styleClass>
+                        <String fx:value="padding-l-2" />
+                        <String fx:value="alignment-center-left" />
+                     </styleClass>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                     <children>
+                        <JFXComboBox promptText="Filtros" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="alignment-center-right" />
+                        <String fx:value="padding-r-2" />
+                     </styleClass>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4">
                      <children>
                         <VBox alignment="CENTER" prefHeight="53.0" prefWidth="117.0">
                            <children>
@@ -53,58 +142,14 @@
                         </VBox>
                         <FontAwesomeIconView glyphName="USER" size="32" />
                      </children>
+                     <styleClass>
+                        <String fx:value="padding-r-1" />
+                        <String fx:value="alignment-center-center" />
+                     </styleClass>
                   </HBox>
-               </children>
-            </GridPane>
-         </top>
-         <center>
-            <GridPane BorderPane.alignment="CENTER">
-              <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="131.0" prefWidth="162.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="59.0" prefWidth="89.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="63.0" prefWidth="63.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="69.0" prefWidth="248.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="13.0" prefWidth="13.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
-              </columnConstraints>
-              <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="3" GridPane.rowSpan="7">
                      <children>
-                        <Label text="Citas" underline="true">
-                           <font>
-                              <Font name="Monospaced Bold" size="20.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </VBox>
-                  <VBox alignment="TOP_CENTER" styleClass="vBoxDashboard" GridPane.rowSpan="8">
-                     <children>
-                        <HBox alignment="CENTER" prefHeight="171.0" prefWidth="120.0">
-                           <children>
-                              <FontAwesomeIconView fill="WHITE" glyphName="BOOK" size="15" />
-                              <Label text=" Agenda" textFill="#fff6f6">
-                                 <font>
-                                    <Font size="15.0" />
-                                 </font></Label>
-                           </children>
-                        </HBox>
-                     </children>
-                  </VBox>
-                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="150.0" styleClass="vBoxAgendar" GridPane.columnIndex="7" GridPane.rowIndex="1" GridPane.rowSpan="7">
-                     <children>
-                        <Label prefHeight="62.0" prefWidth="65.0" text="Agendar">
+                        <Label prefHeight="62.0" prefWidth="73.0" styleClass="subtitle" text="Agendar">
                            <font>
                               <Font name="Corbel Bold" size="17.0" />
                            </font>
@@ -143,15 +188,15 @@
                            </children>
                         </HBox>
                      </children>
+                     <styleClass>
+                        <String fx:value="form" />
+                        <String fx:value="padding-x-1" />
+                        <String fx:value="alignment-top-center" />
+                     </styleClass>
                   </VBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.columnSpan="2">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" GridPane.rowSpan="7">
                      <children>
-                        <JFXComboBox promptText="Filtros" />
-                     </children>
-                  </HBox>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="4" GridPane.rowIndex="1" GridPane.rowSpan="7">
-                     <children>
-                        <YearMonthView />
+                        <MonthPage styleClass="padding-x-1" />
                      </children>
                   </StackPane>
                </children>
@@ -163,6 +208,11 @@
       <URL value="@../stylesheets/medico.css" />
       <URL value="@../stylesheets/fuentes.css" />
       <URL value="@../stylesheets/paleta-colores.css" />
-      <URL value="@../stylesheets/boton.css" />
+      <URL value="@../stylesheets/button.css" />
+      <URL value="@../stylesheets/alignment.css" />
+      <URL value="@../stylesheets/dashboard.css" />
+      <URL value="@../stylesheets/padding.css" />
+      <URL value="@../stylesheets/titles.css" />
+      <URL value="@../stylesheets/form.css" />
    </stylesheets>
 </StackPane>
