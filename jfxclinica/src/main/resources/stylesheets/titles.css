@@ -1,8 +1,7 @@
 .title {
 	-fx-font-family: "Roboto Bold";
-	-fx-font-size: 24px;
-	-fx-text-fill: -fx-primary;
-/* 	-fx-effect: dropshadow(gaussian, -fx-secondary-dark, 1em, 0, 0, .3em);*/
+	-fx-font-size: 32px;
+	-fx-text-fill: -fx-text-dark;
 }
 
 .subtitle {
