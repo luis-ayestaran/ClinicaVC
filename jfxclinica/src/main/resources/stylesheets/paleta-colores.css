@@ -9,7 +9,8 @@
 	-fx-secondary-light: #CFD1D2;
 	-fx-bg-light: #eee;
 	-fx-text-correct: #F38F25;
+	-fx-info: #888;
 	-fx-wrong-text: #8E2616;
 	-fx-text-dark: #555;
-	-fx-info: #888;
+	-fx-text-light: whitesmoke;
 }

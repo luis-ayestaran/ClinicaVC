@@ -10,8 +10,6 @@
 	-fx-text-fill: -fx-primary-dark;
 }
 
-.outline.subtitle {
-    -fx-fill: lightseagreen;
-    -fx-stroke: firebrick;
-    -fx-stroke-width: 2px;
+.logo {
+	-fx-background-image: url('/images/logo.png'); 
 }

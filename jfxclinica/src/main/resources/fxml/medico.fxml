@@ -11,8 +11,6 @@
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -28,14 +26,12 @@
          <center>
             <GridPane BorderPane.alignment="CENTER">
               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="131.0" prefWidth="162.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="63.0" prefWidth="186.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.0" minWidth="69.0" prefWidth="163.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" prefWidth="200.0" />
               </columnConstraints>
               <rowConstraints>
-                  <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="1.0" minHeight="1.0" prefHeight="1.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -47,70 +43,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <HBox maxWidth="120.0" minWidth="120.0" prefHeight="100.0" prefWidth="120.0" styleClass="alignment-center-center" GridPane.columnSpan="3">
-                     <children>
-                        <ImageView fitHeight="150.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/logo.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0" styleClass="top-line" GridPane.columnSpan="5" GridPane.rowIndex="1" />
-                  <VBox alignment="TOP_CENTER" GridPane.rowIndex="2" GridPane.rowSpan="8">
-                     <children>
-                        <HBox prefHeight="53.0" prefWidth="103.0" />
-                        <HBox alignment="CENTER" prefHeight="35.0" prefWidth="103.0">
-                           <children>
-                              <Label styleClass="dashboard-options" text="Agenda" textFill="#fff6f6">
-                                 <font>
-                                    <Font size="15.0" />
-                                 </font>
-                                 <graphic>
-                                    <FontAwesomeIconView fill="WHITE" glyphName="BOOK" size="15" styleClass="dashboard-options" />
-                                 </graphic></Label>
-                           </children>
-                           <styleClass>
-                              <String fx:value="alignment-center-center" />
-                              <String fx:value="padding-y-2" />
-                              <String fx:value="dashboard-options" />
-                           </styleClass>
-                        </HBox>
-                        <HBox prefHeight="34.0" prefWidth="103.0">
-                           <children>
-                              <Label styleClass="dashboard-options" text="Planes">
-                                 <graphic>
-                                    <FontAwesomeIconView glyphName="DOLLAR" styleClass="dashboard-options" />
-                                 </graphic>
-                              </Label>
-                           </children>
-                           <styleClass>
-                              <String fx:value="alignment-center-center" />
-                              <String fx:value="padding-y-2" />
-                              <String fx:value="dashboard-options" />
-                           </styleClass>
-                        </HBox>
-                        <HBox prefHeight="34.0" prefWidth="103.0">
-                           <children>
-                              <Label styleClass="dashboard-options" text="Recibos">
-                                 <graphic>
-                                    <FontAwesomeIconView glyphName="CLIPBOARD" styleClass="dashboard-options" />
-                                 </graphic>
-                              </Label>
-                           </children>
-                           <styleClass>
-                              <String fx:value="alignment-center-center" />
-                              <String fx:value="padding-y-2" />
-                              <String fx:value="dashboard-options" />
-                           </styleClass>
-                        </HBox>
-                     </children>
-                     <styleClass>
-                        <String fx:value="dashboard" />
-                        <String fx:value="alignment-top-center" />
-                     </styleClass>
-                  </VBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <VBox alignment="CENTER" GridPane.rowIndex="1">
                      <children>
                         <Label styleClass="title" text="Citas">
                            <font>
@@ -123,7 +56,7 @@
                         <String fx:value="alignment-center-left" />
                      </styleClass>
                   </VBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                  <HBox alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <children>
                         <JFXComboBox promptText="Filtros" />
                      </children>
@@ -132,46 +65,31 @@
                         <String fx:value="padding-r-2" />
                      </styleClass>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4">
-                     <children>
-                        <VBox alignment="CENTER" prefHeight="53.0" prefWidth="117.0">
-                           <children>
-                              <Label text="Fulanito Matasanos" />
-                              <Label text="Odontólogo" />
-                           </children>
-                        </VBox>
-                        <FontAwesomeIconView glyphName="USER" size="32" />
-                     </children>
-                     <styleClass>
-                        <String fx:value="padding-r-1" />
-                        <String fx:value="alignment-center-center" />
-                     </styleClass>
-                  </HBox>
-                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="3" GridPane.rowSpan="7">
+                  <VBox alignment="TOP_CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="7">
                      <children>
                         <Label prefHeight="62.0" prefWidth="73.0" styleClass="subtitle" text="Agendar">
                            <font>
                               <Font name="Corbel Bold" size="17.0" />
                            </font>
                         </Label>
-                        <HBox alignment="CENTER" prefHeight="49.0" prefWidth="133.0">
+                        <HBox alignment="CENTER">
                            <children>
                               <JFXDatePicker defaultColor="#19507d" editable="false" promptText="Fecha" />
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" prefHeight="47.0" prefWidth="133.0">
+                        <HBox alignment="CENTER">
                            <children>
-                              <JFXTimePicker defaultColor="#19517f" prefHeight="24.0" prefWidth="133.0" promptText="Hora" />
+                              <JFXTimePicker defaultColor="#19517f" promptText="Hora" />
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" prefHeight="41.0" prefWidth="133.0">
+                        <HBox alignment="CENTER">
                            <children>
-                              <JFXTextField alignment="CENTER" focusColor="#19517f" promptText="Paciente" />
+                              <JFXTextField alignment="CENTER" focusColor="#19517f" labelFloat="true" prefWidth="171.0" promptText="Paciente" styleClass="alignment-center-left" />
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" prefHeight="39.0" prefWidth="133.0">
+                        <HBox alignment="CENTER">
                            <children>
-                              <JFXComboBox focusColor="#19517f" promptText="Consultorio">
+                              <JFXComboBox focusColor="#19517f" labelFloat="true" prefWidth="171.0" promptText="Consultorio">
                                  <opaqueInsets>
                                     <Insets />
                                  </opaqueInsets>
@@ -194,7 +112,7 @@
                         <String fx:value="alignment-top-center" />
                      </styleClass>
                   </VBox>
-                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" GridPane.rowSpan="7">
+                  <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.rowSpan="7">
                      <children>
                         <MonthPage styleClass="padding-x-1" />
                      </children>
@@ -202,6 +120,109 @@
                </children>
             </GridPane>
          </center>
+         <left>
+            <GridPane BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" prefWidth="110.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox alignment="TOP_CENTER">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Label text="Agenda" textFill="#fff6f6">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="BOOK" size="15" styleClass="icon" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                           <styleClass>
+                              <String fx:value="alignment-center-left" />
+                              <String fx:value="padding-1" />
+                              <String fx:value="dashboard-options" />
+                           </styleClass>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="Planes">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="DOLLAR" styleClass="icon" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                           <styleClass>
+                              <String fx:value="alignment-center-left" />
+                              <String fx:value="padding-1" />
+                              <String fx:value="dashboard-options" />
+                           </styleClass>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="Recibos">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="CLIPBOARD" styleClass="icon" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                           <styleClass>
+                              <String fx:value="alignment-center-left" />
+                              <String fx:value="padding-1" />
+                              <String fx:value="dashboard-options" />
+                           </styleClass>
+                        </HBox>
+                     </children>
+                     <styleClass>
+                        <String fx:value="dashboard" />
+                        <String fx:value="alignment-top-center" />
+                        <String fx:value="padding-t-1" />
+                     </styleClass>
+                  </VBox>
+               </children>
+            </GridPane>
+         </left>
+         <top>
+            <GridPane BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox styleClass="logo" />
+                  <HBox alignment="CENTER" GridPane.columnIndex="1">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="53.0" prefWidth="117.0">
+                           <children>
+                              <Label text="Fulanito Matasanos" />
+                              <Label text="Odontólogo" />
+                           </children>
+                           <styleClass>
+                              <String fx:value="alignment-center-right" />
+                              <String fx:value="padding-r-1" />
+                           </styleClass>
+                        </VBox>
+                        <FontAwesomeIconView glyphName="USER" size="32" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="padding-r-1" />
+                        <String fx:value="alignment-center-right" />
+                     </styleClass>
+                  </HBox>
+               </children>
+               <styleClass>
+                  <String fx:value="padding-y-1" />
+                  <String fx:value="top-line" />
+               </styleClass>
+            </GridPane>
+         </top>
       </BorderPane>
    </children>
    <stylesheets>
@@ -214,5 +235,6 @@
       <URL value="@../stylesheets/padding.css" />
       <URL value="@../stylesheets/titles.css" />
       <URL value="@../stylesheets/form.css" />
+      <URL value="@../stylesheets/text-field.css" />
    </stylesheets>
 </StackPane>
