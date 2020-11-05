@@ -1,0 +1,5 @@
+.root {
+	-fx-background-color: transparent;
+	-fx-padding: 32px;
+	-fx-effect: drop-shadow(gaussian, -fx-shadows, 24, 0, 0, 6);
+}
